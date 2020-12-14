@@ -1,0 +1,71 @@
+/* ПОЛОСА ПРОКРУТКИ ДЛЯ ОСНОВНОЙ ЧАСТИ */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color:#ee6e73;
+  transition: .3s;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background-color: #e3474c;
+}
+/* /ПОЛОСА ПРОКРУТКИ ДЛЯ ОСНОВНОЙ ЧАСТИ */
+
+/* ПОЛОСА ПРОКРУТКИ ДЛЯ АДМИНКИ */
+.aside::-webkit-scrollbar {
+  width: 3px;
+}
+
+.aside::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #868686;
+  transition: .3s;
+}
+
+.aside::-webkit-scrollbar-thumb:hover{
+  background-color: #484848;
+}
+/* /ПОЛОСА ПРОКРУТКИ ДЛЯ АДМИНКИ */
+
+body {
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+// Анимация перехода страниц
+.page-enter-active,
+.page-leave-active {
+  transition: transform .5s;
+}
+
+.page-enter,
+.page-leave-to {
+  transform: translateX(300%);
+}
+
+// Для форм
+.error {
+  font-size: 12px;
+  color: #F44336;
+}
+
+.loadingAnimate {
+  transform: rotate(0deg);
+  animation: loading 1s linear infinite;
+}
+
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
